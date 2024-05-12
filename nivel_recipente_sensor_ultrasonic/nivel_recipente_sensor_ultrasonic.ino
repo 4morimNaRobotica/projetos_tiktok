@@ -1,6 +1,6 @@
 #include <Ultrasonic.h> // biblioteca utilizada, pode ser encontrada no ide do arduino
 
-#define r 12 //led vermelho
+#define r 9 //led vermelho
 #define y 8 //led amarelo
 #define g 7 //led verde
 
@@ -25,7 +25,11 @@ void loop() {
   Serial.print("Distance in CM: ");
   Serial.println(distance);
   delay(1000);
-
+  
+ /*importante ressaltar que para o projeto funcionar perfeitamente,
+ voce tem que saber a distancia em cm do recipiente vazio
+  , com o volume na metade e com o recipiente cheio.*/
+  
   if(distance <= 5){
   digitalWrite(r,LOW);
   digitalWrite(y,LOW);
